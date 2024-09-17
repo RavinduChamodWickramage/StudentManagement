@@ -14,24 +14,24 @@ A comprehensive application for managing student records using Spring Boot and J
 **Database:** MySQL
 
 # Installation
-1. Clone the repository:
+1. Clone the repository:  
 ```git clone https://github.com/RavinduChamodWickramage/StudentManagement.git```  
 
-2. Navigate to the project directory:
+2. Navigate to the project directory:  
 cd StudentManagement
 
 3. Set up the MySQL database and configure the connection in application.properties.
 
-4. Build the project using Maven:
+4. Build the project using Maven:  
 ```mvn clean install```
 
-5. Run the Spring Boot application:
+5. Run the Spring Boot application:  
 ```mvn spring-boot:run```
 
 6. Launch the JavaFX application separately, if applicable.
 
 # Usage
-Access the application through the configured URL.
+Access the application through the configured URL.  
 Use the provided UI to manage student records.
 
 # Contributing
