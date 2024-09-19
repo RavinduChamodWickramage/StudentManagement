@@ -91,17 +91,17 @@ function loadTable() {
       students.forEach((student) => {
         const row = document.createElement("tr");
         row.innerHTML = `
-          <td>${student.studentID}</td>
-          <td>${student.title}</td>
-          <td>${student.firstName}</td>
-          <td>${student.lastName}</td>
-          <td>${student.nic}</td>
-          <td>${student.dob}</td>
-          <td>${student.gender}</td>
-          <td>${student.address}</td>
-          <td>${student.contactNumber}</td>
-          <td>${student.email}</td>
-          <td>
+          <td data-label="Student ID">${student.studentID}</td>
+          <td data-label="Title">${student.title}</td>
+          <td data-label="First Name">${student.firstName}</td>
+          <td data-label="Last Name">${student.lastName}</td>
+          <td data-label="NIC">${student.nic}</td>
+          <td data-label="Date of Birth">${student.dob}</td>
+          <td data-label="Gender">${student.gender}</td>
+          <td data-label="Address">${student.address}</td>
+          <td data-label="Contact Number">${student.contactNumber}</td>
+          <td data-label="Email">${student.email}</td>
+          <td data-label="Actions">
             <button class="btn btn-warning btn-sm" onclick="editStudent('${student.studentID}')">Update</button>
             <button class="btn btn-danger btn-sm" onclick="deleteStudent('${student.studentID}')">Delete</button>
           </td>

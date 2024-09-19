@@ -10,6 +10,7 @@
       integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
       crossorigin="anonymous"
     />
+    <link href="styles.css" rel="stylesheet" />
     <title>Students</title>
   </head>
   <body>
@@ -39,7 +40,7 @@
           <form id="studentForm" class="form p-lg-5">
             <div class="row">
               <!-- Student ID -->
-              <div class="col-md-10">
+              <div class="studentId col-md-10">
                 <div class="mb-3">
                   <label for="studentID" class="form-label">Student ID:</label>
                   <label
@@ -52,7 +53,7 @@
               </div>
 
               <!-- Date -->
-              <div class="col-md-2">
+              <div class="date col-md-2">
                 <div class="mb-3">
                   <label for="date" class="form-label">Date:</label>
                   <label id="date" class="form-label" style="font-weight: bold"
@@ -218,34 +219,45 @@
       </h1>
       <div class="d-flex justify-content-center">
         <!-- Search Bar -->
-        <nav class="navbar bg-body-tertiary">
-          <div class="container-fluid">
-            <form class="d-lg-flex" role="search" onsubmit="return false;">
-              <input
-                id="searchInput"
-                class="form-control me-2"
-                type="search"
-                placeholder="Search by name or student ID"
-                aria-label="Search"
-                oninput="searchStudent()"
-              />
-              <button
-                class="btn btn-outline-info"
-                type="button"
-                onclick="searchStudent()"
+        <div class="row">
+          <nav class="navbar">
+            <div class="container-fluid">
+              <form
+                class="row gx-1 d-flex align-items-center flex-wrap"
+                role="search"
+                onsubmit="return false;"
+                style="width: 500px"
               >
-                Search
-              </button>
-            </form>
-          </div>
-        </nav>
+                <div class="col-9 col-md-10">
+                  <input
+                    id="searchInput"
+                    class="form-control"
+                    type="search"
+                    placeholder="Search by Name or Student ID"
+                    aria-label="Search"
+                    oninput="searchStudent()"
+                  />
+                </div>
+                <div class="col-3 col-md-2 d-flex justify-content-start">
+                  <button
+                    class="btn btn-outline-info w-100"
+                    type="button"
+                    onclick="searchStudent()"
+                  >
+                    Search
+                  </button>
+                </div>
+              </form>
+            </div>
+          </nav>
+        </div>
       </div>
 
       <div class="d-flex justify-content-center">
         <!-- Student Table -->
         <table
           id="tblStudent"
-          class="table table-striped table-bordered"
+          class="table table-striped table-bordered table-responsive-md"
         ></table>
       </div>
     </div>
